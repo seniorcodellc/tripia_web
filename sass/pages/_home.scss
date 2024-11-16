@@ -1,0 +1,476 @@
+// header
+.home-transparant {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background: transparent;
+  border-bottom: none;
+  padding: 15px;
+  box-shadow: none;
+  .nav-item {
+    color: white !important;
+  }
+}
+
+/* Start body  */
+
+.loby {
+  // height: 450px;
+  margin-bottom: 100px !important; 
+  &::before {
+    content: "";
+    background-image: url("/imgs/home/home.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    height: 79%;
+    max-height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    filter: brightness(0.9);
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    position: relative;
+    .text {
+      flex: 1;
+      color: white;
+      h2 {
+        font-family: "Almarai";
+        font-family: "Graphik Arabic", sans-serif;
+        font-size: 80px;
+        font-weight: 800;
+        line-height: 89.28px;
+        text-align: right;
+        width: 437px;
+        max-width: 100%;
+        margin: 140px 0 35px;
+      }
+      p {
+        font-family: "Almarai";
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 31.25px;
+        text-align: right;
+        width: 549px;
+        max-width: 100%;
+      }
+    }
+    .apps {
+      margin-top: 35px;
+      img {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+/* start Tripia info  */
+
+.tripia-info {
+  display: flex;
+  .container {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    .text {
+      flex: 1;
+      color: var(--main-color);
+      padding: 0 7%;
+      h2 {
+        font-family: "Almarai";
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 24px;
+        margin: 30px 0 40px;
+      }
+      .box-info {
+        margin-bottom: 30px;
+        h6 {
+          font-family: "Almarai";
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          text-align: right;
+          img {
+            margin: 0 0 0 10px;
+          }
+        }
+        p {
+          font-family: "Almarai";
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 24px;
+          text-align: right;
+          margin: 0 35px 0 0;
+        }
+      }
+    }
+  }
+  &.model-2 {
+    direction: rtl;
+  }
+  &.model-3 {
+    p {
+      margin: 0 !important;
+    }
+    a {
+      float: right;
+      margin-top: 20px;
+      padding: 12px 32px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100px;
+      background: var(--main, #d60036);
+    }
+  }
+}
+
+/* end Tripia info   */
+
+// start get-app-sec
+/* start Download app  */
+
+.mobile {
+  display: flex;
+  .container {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 56px;
+    background: var(--main, #d60036);
+    div {
+      flex: 1;
+      .text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: fit-content;
+        h2 {
+          color: #fff;
+          text-align: right;
+          font-family: "Almarai";
+          font-size: 36px;
+          font-style: normal;
+          font-weight: 800;
+          line-height: 56px;
+          width: 432px;
+          max-width: 100%;
+        }
+        p {
+          color: #fff;
+          text-align: right;
+          font-family: "Almarai";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          padding: 32px 0;
+        }
+        .btn {
+          background: white;
+          color: var(--main);
+          border-radius: 100px;
+          padding: 16px 48px;
+        }
+      }
+    }
+  }
+}
+
+.mobile .img {
+  height: 100%;
+}
+
+.mobile .img img {
+  height: 100%;
+}
+
+@media (max-width: 576px) {
+  .mobile .img img {
+    width: 230px;
+  }
+
+  .mobile h2 {
+    font-weight: 700;
+    font-size: 30px;
+    margin: auto;
+    padding-top: 35px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mobile p {
+    font-size: 16px;
+    justify-content: center;
+    display: flex;
+    margin: 20px 15px 10px;
+  }
+
+  .mobile .img {
+    transform: translateY(35px);
+  }
+
+  .mobile .app-holder a {
+    background: #1c1b1e;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 2px 7px;
+    border-radius: 8px;
+    margin-right: 30px;
+  }
+
+  .mobile .app-holder a .app-icon img {
+    width: 18px;
+  }
+
+  .mobile .app-holder a .app-info h6 {
+    color: white;
+    font-size: 9px;
+    margin: 0;
+    padding: 3px 0 0 0;
+  }
+
+  .mobile .app-holder a .app-info h3 {
+    color: white;
+    font-size: 12px;
+    margin: 0;
+    padding: 3px 0 3px 0;
+  }
+
+  .mobile .container {
+    height: auto;
+    flex-direction: column-reverse;
+  }
+}
+
+// end get-app-sec
+
+/* end Questions sec   */
+.questions-sec {
+  .container {
+    > div:first-of-type {
+      margin-top: 100px;
+      margin-bottom: 50px;
+      > h2 {
+        color: var(--dark, #252525);
+        text-align: center;
+        font-family: "Almarai";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      > p {
+        color: var(--dark, #252525);
+        text-align: center;
+        font-family: "Almarai";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 24px;
+      }
+    }
+    .accordion {
+      gap: 24px;
+      display: grid;
+      .accordion-item {
+        border-radius: 16px;
+        background: #fff;
+        box-shadow: -142px 174px 63px 0px rgba(135, 135, 135, 0),
+          -91px 112px 58px 0px rgba(135, 135, 135, 0.01),
+          -51px 63px 49px 0px rgba(135, 135, 135, 0.05),
+          -23px 28px 36px 0px rgba(135, 135, 135, 0.09),
+          -6px 7px 20px 0px rgba(135, 135, 135, 0.1);
+        overflow: hidden;
+        border: none;
+
+        > div {
+          p {
+            font-family: "Almarai";
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 36px;
+            text-align: right;
+            color: var(--paragraph);
+            border-top: 2px solid var(--dark-border);
+            margin: 0 20px;
+            padding: 16px 0;
+          }
+        }
+      }
+      .accordion-button {
+        font-family: "Almarai";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: right;
+        color: var(--dark);
+        padding: 25px 20px;
+
+        &::after {
+          margin-left: unset;
+          margin-right: auto;
+          transform: rotate(270deg);
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23dc3545' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+        }
+        &:not(.collapsed) {
+          color: var(--dark);
+          background-color: transparent;
+          box-shadow: none;
+          &::after {
+            transform: rotate(360deg);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23dc3545' class='bi bi-chevron-down' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+          }
+        }
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+/* end Questions sec   */
+
+/* end Questions sec   */
+.carousel-inner {
+  padding: 1em !important;
+}
+
+.carousel-control-prev {
+  left: 35% !important;
+}
+.carousel-control-prev-icon {
+  background-image: url(/imgs/home/iconright.svg) !important;
+  height: 3rem !important;
+  width: 3rem !important;
+}
+.carousel-control-next {
+  right: 35% !important;
+}
+.carousel-control-next-icon {
+  
+  background-image: url(/imgs/home/iconleft.svg) !important;
+  height: 3rem !important;
+  width: 3rem !important;
+}
+
+.card {
+  margin: 0 0.5em !important;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18) !important;
+  border: none !important;
+}
+.carousel {
+  position: relative;
+  padding-top: 70px;
+}
+.carousel div h3{
+  font-family: "Almarai";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 24px;
+color: white;
+text-align: center;  
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 6vh !important;
+  height: 6vh !important;
+  border-radius: 50% !important;
+  bottom: -22% !important;
+  top: auto !important;
+  transform: translateY(-50%) !important;
+}
+@media (min-width: 768px) {
+  .carousel-item {
+    margin-right: 0 !important;
+    flex: 0 0 33.333333% !important;
+    display: block !important;
+  }
+  .carousel-inner {
+    display: flex !important;
+  }
+}
+.card .img-wrapper {
+  max-width: 100% !important;
+  height: 13em !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.card img {
+  height: 92px;
+  width: 92px !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+.card {
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+.card .img-wrapper {
+  padding: 0 20px !important;
+}
+
+.card .card-body {
+  padding: 0 30px !important;
+}
+
+.card .card-body h5 {
+  text-align: center !important;
+  font-family: "Almarai" !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  line-height: 24px !important;
+  color: WHITE !important;
+}
+.card .card-body p {
+  font-family: "Almarai" !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 24px !important;
+  text-align: center !important;
+  color: WHITE !important;
+}
+
+@media (max-width: 767px) {
+  .card .img-wrapper {
+    height: 17em !important;
+  }
+}
+.carousel-indicators {
+  bottom: -85px !important;
+  margin-bottom: 0 !important;
+}
+.carousel-item {
+  padding: 0 25px;
+}
+.question {
+  background:var(--main);
+  height: 90vh;
+}
+.carousel-indicators [data-bs-target] {
+  width: 8px !important;
+  height: 8px !important;
+  background: transparent !important;
+  border: 1px solid white !important;
+  border-radius: 50% !important;
+}
+.carousel-indicators .active {
+  background: white !important;
+}
+.card {
+  background-color: transparent !important;
+}
+/* end Questions sec   */

@@ -1,0 +1,37 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+:root {
+  --main: #d60036;
+  --light: #b8b8d1;
+  --paragraph: #4b4b4b;
+  --dark: #252525;
+  --dark-border: rgba(37, 37, 37, 0.1);
+  --main-padding: 20px;
+  --main-transition: 0.5s;
+}
+
+body {
+  font: {
+    family: 'Almarai', sans-serif;
+    style: normal;
+  }
+}
+section {
+  margin-bottom: 50px;
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  direction: rtl;
+}

@@ -1,0 +1,31 @@
+header {
+  background: transparent;
+  padding: 15px;
+  box-shadow: 0 0 10px #ccc;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      .nav-item {
+        text-decoration: none;
+        color: var(--dark);
+        padding: 5px 0;
+        position: relative;
+        &.active {
+          border-bottom: 3px solid var(--main);
+          color: var(--main);
+        }
+        &:hover {
+          color: var(--main);
+        }
+      }
+    }
+    .logo {
+      width: 100px;
+    }
+  }
+}

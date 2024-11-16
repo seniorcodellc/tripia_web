@@ -1,0 +1,105 @@
+.packages {
+  h2 {
+    font-family: "Almarai";
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 44.64px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  P {
+    color: var(--dark, #252525);
+    text-align: center;
+    font-family: "Almarai";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    width: 425px;
+    margin: 30px auto 0;
+  }
+}
+
+.packages-2 {
+  .packages-holder {
+    .row {
+      margin: 0;
+    }
+  }
+  .card {
+    border-radius: 32px !important;
+    background: #fff !important;
+    box-shadow: -142px 174px 63px 0px rgba(135, 135, 135, 0),
+      -91px 112px 58px 0px rgba(135, 135, 135, 0.01),
+      -51px 63px 49px 0px rgba(135, 135, 135, 0.05),
+      -23px 28px 36px 0px rgba(135, 135, 135, 0.09),
+      -6px 7px 20px 0px rgba(135, 135, 135, 0.1) !important;
+
+
+    .card-body {
+      padding: 5px 30px 20px !important;
+    }
+    .tag {
+      background: url("/imgs/about_us/tagwhite.svg");
+      height: 80px;
+      width: 80px;
+      margin: 20px auto;
+    }
+    h5 {
+      color: #1e1e1e !important;
+      text-align: center !important;
+      font-family: "Almarai" !important;
+      font-size: 16px !important;
+      font-style: normal !important;
+      font-weight: 700 !important;
+      line-height: normal !important;
+      text-transform: capitalize !important;
+    }
+
+    h3 {
+      color: var(--main, #d60036) !important;
+      text-align: center !important;
+      font-family: "Almarai" !important;
+      font-size: 32px !important;
+      font-style: normal !important;
+      font-weight: 800 !important;
+      line-height: normal !important;
+      text-transform: capitalize !important;
+      margin: 20px 0;
+    }
+
+    p {
+      color: #1e1e1e !important;
+      text-align: right !important;
+      font-family: "Almarai" !important;
+      font-size: 14px !important;
+      font-style: normal !important;
+      font-weight: 400 !important;
+      line-height: normal !important;
+      text-transform: capitalize !important;
+    }
+    i,
+    svg {
+      color: var(--main) !important;
+      margin: 0 10px;
+    }
+
+
+    &:hover {
+      background: var(--main) !important;
+      transition: .5s;
+
+      h5,
+      h3,
+      p,
+      i,
+      svg {
+        color: white !important;
+      }
+
+      .tag {
+        background: url("/imgs/about_us/tagred.svg");
+      }
+    }
+  }
+}
