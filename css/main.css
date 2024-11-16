@@ -564,15 +564,16 @@ header nav .logo {
 .card .card-body h5 {
   text-align: center !important;
   font-family: "Almarai" !important;
-  font-size: 24px !important;
+  font-size: 20px !important;
   font-weight: 700 !important;
   line-height: 24px !important;
   color: WHITE !important;
+  margin-bottom: 25px;
 }
 
 .card .card-body p {
   font-family: "Almarai" !important;
-  font-size: 16px !important;
+  font-size: 14px !important;
   font-weight: 400 !important;
   line-height: 24px !important;
   text-align: center !important;
@@ -587,6 +588,7 @@ header nav .logo {
 .carousel-indicators {
   bottom: -85px !important;
   margin-bottom: 0 !important;
+  z-index: 0 !important;
 }
 
 .carousel-item {

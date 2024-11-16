@@ -7,38 +7,113 @@ navItems.forEach((item) => {
   });
 });
 
+// $(document).ready(function () {
+//   if (window.matchMedia("(min-width: 1300px)").matches) {
+//     var carouselWidth = $(".carousel-inner")[0].scrollWidth;
+//     var cardWidth = $(".carousel-item").width();
+//     var totalCards = $(".carousel-item").length;
+//     var middleCardIndex = Math.floor(totalCards / 3);
+//     var scrollPosition = middleCardIndex * cardWidth * 1.112 ; 
+
+//     $(".carousel-inner").scrollLeft(scrollPosition);
+
+//     $(".carousel-control-next").on("click", function () {
+//       if (scrollPosition >= carouselWidth - cardWidth * 4) {
+//         scrollPosition = 0;
+//       } else {
+//         scrollPosition += cardWidth * 1.112 ;
+//       }
+//       $(".carousel-inner").animate({ scrollLeft: scrollPosition }, 200);
+//     });
+
+//     $(".carousel-control-prev").on("click", function () {
+//       if (scrollPosition <= 0) {
+//         scrollPosition = carouselWidth - cardWidth * 4.5;
+//       } else {
+//         scrollPosition -= cardWidth * 1.112 ;
+//       }
+//       $(".carousel-inner").animate({ scrollLeft: scrollPosition }, 200);
+//     });
+//   }
+// });
+
+// $(document).ready(function () {
+//   // Check if the screen width matches
+//   if (window.matchMedia("(min-width: 1300px)").matches) {
+//     const $carouselInner = $(".carousel-inner");
+//     const $carouselItem = $(".carousel-item");
+//     const carouselWidth = $carouselInner[0].scrollWidth;
+//     const cardWidth = $carouselItem.outerWidth(true); // Includes margin
+//     const totalCards = $carouselItem.length;
+//     const visibleCards = Math.floor($carouselInner.width() / cardWidth); // Calculate visible cards
+//     const middleCardIndex = Math.floor(totalCards / 2) - Math.floor(visibleCards / 2);
+
+//     // Initial scroll position to align the middle card
+//     let scrollPosition = middleCardIndex * cardWidth;
+
+//     // Set initial scroll position
+//     $carouselInner.scrollLeft(scrollPosition);
+
+//     // Handle Next Button
+//     $(".carousel-control-next").on("click", function () {
+//       if (scrollPosition >= carouselWidth - cardWidth * visibleCards) {
+//         scrollPosition = 0; // Loop back to start
+//       } else {
+//         scrollPosition += cardWidth; // Move to the next card
+//       }
+//       $carouselInner.animate({ scrollLeft: scrollPosition }, 200);
+//     });
+
+//     // Handle Previous Button
+//     $(".carousel-control-prev").on("click", function () {
+//       if (scrollPosition <= 0) {
+//         scrollPosition = carouselWidth - cardWidth * visibleCards; // Loop to the end
+//       } else {
+//         scrollPosition -= cardWidth; // Move to the previous card
+//       }
+//       $carouselInner.animate({ scrollLeft: scrollPosition }, 200);
+//     });
+//   }
+// });
+
+
 $(document).ready(function () {
+  // Check if the screen width matches
   if (window.matchMedia("(min-width: 1300px)").matches) {
-    var carouselWidth = $(".carousel-inner")[0].scrollWidth;
-    var cardWidth = $(".carousel-item").width();
-    var totalCards = $(".carousel-item").length;
-    var middleCardIndex = Math.floor(totalCards / 3);
-    var scrollPosition = middleCardIndex * cardWidth * 1.112 ; 
+    const $carouselInner = $(".carousel-inner");
+    const $carouselItem = $(".carousel-item");
+    const carouselWidth = $carouselInner[0].scrollWidth;
+    const cardWidth = $carouselItem.outerWidth(true); // Includes margin
+    const totalCards = $carouselItem.length;
+    const visibleCards = Math.floor($carouselInner.width() / cardWidth); // Calculate visible cards
 
-    $(".carousel-inner").scrollLeft(scrollPosition);
+    // Initial scroll position (Start with the first three cards in view)
+    let scrollPosition = 0;
 
+    // Set initial scroll position
+    $carouselInner.scrollLeft(scrollPosition);
+
+    // Handle Next Button
     $(".carousel-control-next").on("click", function () {
-      if (scrollPosition >= carouselWidth - cardWidth * 4) {
-        scrollPosition = 0;
+      if (scrollPosition >= carouselWidth - cardWidth * visibleCards) {
+        scrollPosition = 0; // Loop back to start
       } else {
-        scrollPosition += cardWidth * 1.112 ;
+        scrollPosition += cardWidth; // Move to the next card
       }
-      $(".carousel-inner").animate({ scrollLeft: scrollPosition }, 200);
+      $carouselInner.animate({ scrollLeft: scrollPosition }, 200);
     });
 
+    // Handle Previous Button
     $(".carousel-control-prev").on("click", function () {
       if (scrollPosition <= 0) {
-        scrollPosition = carouselWidth - cardWidth * 4.5;
+        scrollPosition = carouselWidth - cardWidth * visibleCards; // Loop to the end
       } else {
-        scrollPosition -= cardWidth * 1.112 ;
+        scrollPosition -= cardWidth; // Move to the previous card
       }
-      $(".carousel-inner").animate({ scrollLeft: scrollPosition }, 200);
+      $carouselInner.animate({ scrollLeft: scrollPosition }, 200);
     });
   }
 });
-
-
-
 
 
 
