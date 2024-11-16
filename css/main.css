@@ -492,13 +492,14 @@ header nav .logo {
   padding-top: 70px;
 }
 
-.carousel div h3 {
+.section-title h3 {
   font-family: "Almarai";
   font-size: 32px;
   font-weight: 700;
   line-height: 24px;
   color: white;
   text-align: center;
+  margin: 70px auto 30px;
 }
 
 .carousel-control-prev,
@@ -558,7 +559,7 @@ header nav .logo {
 }
 
 .card .card-body {
-  padding: 0 30px !important;
+  padding: 0 20px !important;
 }
 
 .card .card-body h5 {
@@ -578,6 +579,8 @@ header nav .logo {
   line-height: 24px !important;
   text-align: center !important;
   color: WHITE !important;
+  width: 305px;
+  margin: auto;
 }
 
 @media (max-width: 767px) {
@@ -614,6 +617,94 @@ header nav .logo {
 
 .card {
   background-color: transparent !important;
+}
+
+.swiper-container {
+  height: 100% !important;
+}
+
+.swiper-button-prev {
+  background: url(/imgs/home/iconright.svg) !important;
+  width: 37px !important;
+  left: 40% !important;
+  top: 90% !important;
+}
+.swiper-button-prev::after, .swiper-button-prev::before {
+  content: "" !important;
+}
+.swiper-button-prev svg {
+  display: none;
+}
+
+.swiper-button-next {
+  background: url(/imgs/home/iconleft.svg) !important;
+  width: 37px !important;
+  right: 40% !important;
+  top: 90% !important;
+}
+.swiper-button-next::after, .swiper-button-next::before {
+  content: "" !important;
+}
+.swiper-button-next svg {
+  display: none;
+}
+
+.dot-container {
+  position: absolute;
+  top: 72% !important;
+  left: 50% !important;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+}
+.dot-container .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.dot-container .dot1 {
+  background-color: white;
+  opacity: 1;
+}
+.dot-container .dot2 {
+  background-color: white;
+  opacity: 0.3;
+}
+.dot-container .dot3 {
+  background-color: white;
+  opacity: 0.25;
+}
+.dot-container .dot4 {
+  background-color: white;
+  opacity: 0.15;
+}
+
+/* dots  */
+.card.active img {
+  width: 124px !important;
+  height: 124px !important;
+}
+.card.active p {
+  font-family: "Almarai";
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 24px !important;
+  width: 309px;
+}
+.card.active h5 {
+  font-family: "Almarai";
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  line-height: 24px !important;
 }
 
 /* end Questions sec   */
@@ -876,6 +967,9 @@ header nav .logo {
   font-weight: 400 !important;
   line-height: normal !important;
   text-transform: capitalize !important;
+  margin-top: 0;
+  margin-bottom: 1rem;
+    width: 305px;
 }
 .packages-2 .card i,
 .packages-2 .card svg {

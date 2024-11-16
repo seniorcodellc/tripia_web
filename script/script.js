@@ -77,43 +77,43 @@ navItems.forEach((item) => {
 // });
 
 
-$(document).ready(function () {
-  // Check if the screen width matches
-  if (window.matchMedia("(min-width: 1300px)").matches) {
-    const $carouselInner = $(".carousel-inner");
-    const $carouselItem = $(".carousel-item");
-    const carouselWidth = $carouselInner[0].scrollWidth;
-    const cardWidth = $carouselItem.outerWidth(true); // Includes margin
-    const totalCards = $carouselItem.length;
-    const visibleCards = Math.floor($carouselInner.width() / cardWidth); // Calculate visible cards
+// $(document).ready(function () {
+//   // Check if the screen width matches
+//   if (window.matchMedia("(min-width: 1300px)").matches) {
+//     const $carouselInner = $(".carousel-inner");
+//     const $carouselItem = $(".carousel-item");
+//     const carouselWidth = $carouselInner[0].scrollWidth;
+//     const cardWidth = $carouselItem.outerWidth(true); // Includes margin
+//     const totalCards = $carouselItem.length;
+//     const visibleCards = Math.floor($carouselInner.width() / cardWidth); // Calculate visible cards
 
-    // Initial scroll position (Start with the first three cards in view)
-    let scrollPosition = 0;
+//     // Initial scroll position (Start with the first three cards in view)
+//     let scrollPosition = 0;
 
-    // Set initial scroll position
-    $carouselInner.scrollLeft(scrollPosition);
+//     // Set initial scroll position
+//     $carouselInner.scrollLeft(scrollPosition);
 
-    // Handle Next Button
-    $(".carousel-control-next").on("click", function () {
-      if (scrollPosition >= carouselWidth - cardWidth * visibleCards) {
-        scrollPosition = 0; // Loop back to start
-      } else {
-        scrollPosition += cardWidth; // Move to the next card
-      }
-      $carouselInner.animate({ scrollLeft: scrollPosition }, 200);
-    });
+//     // Handle Next Button
+//     $(".carousel-control-next").on("click", function () {
+//       if (scrollPosition >= carouselWidth - cardWidth * visibleCards) {
+//         scrollPosition = 0; // Loop back to start
+//       } else {
+//         scrollPosition += cardWidth; // Move to the next card
+//       }
+//       $carouselInner.animate({ scrollLeft: scrollPosition }, 200);
+//     });
 
-    // Handle Previous Button
-    $(".carousel-control-prev").on("click", function () {
-      if (scrollPosition <= 0) {
-        scrollPosition = carouselWidth - cardWidth * visibleCards; // Loop to the end
-      } else {
-        scrollPosition -= cardWidth; // Move to the previous card
-      }
-      $carouselInner.animate({ scrollLeft: scrollPosition }, 200);
-    });
-  }
-});
+//     // Handle Previous Button
+//     $(".carousel-control-prev").on("click", function () {
+//       if (scrollPosition <= 0) {
+//         scrollPosition = carouselWidth - cardWidth * visibleCards; // Loop to the end
+//       } else {
+//         scrollPosition -= cardWidth; // Move to the previous card
+//       }
+//       $carouselInner.animate({ scrollLeft: scrollPosition }, 200);
+//     });
+//   }
+// });
 
 
 
@@ -183,3 +183,6 @@ $(document).ready(function () {
               articleList.appendChild(li);
           });
       }
+
+
+      
